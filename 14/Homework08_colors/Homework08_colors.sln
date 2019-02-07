@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework08_colors", "Homework08_colors\Homework08_colors.csproj", "{C02EE50D-3C6D-4195-970F-07CA047DBECF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C02EE50D-3C6D-4195-970F-07CA047DBECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C02EE50D-3C6D-4195-970F-07CA047DBECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C02EE50D-3C6D-4195-970F-07CA047DBECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C02EE50D-3C6D-4195-970F-07CA047DBECF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9BE14ADA-65A9-484B-B428-49D03A860835}
+	EndGlobalSection
+EndGlobal
