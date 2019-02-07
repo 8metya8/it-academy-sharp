@@ -34,7 +34,7 @@ namespace Homework07_Player
                 else
                 {
                     Console.WriteLine("Parametr 'Producer' is empty.");
-                    return "";
+                    return null;
                 }
             }
         }
@@ -66,6 +66,7 @@ namespace Homework07_Player
                 }
             }
         }
+
         public Player()
         {
             _producer = "Belarus";
