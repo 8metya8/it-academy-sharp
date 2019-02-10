@@ -9,70 +9,53 @@ namespace Homework11_2
     class Program
     {
         private static string Key { get; set; }
+        private static DocumentWorker document;
 
         static void Main(string[] args)
         {
             Console.WriteLine("Do you have PRO or EXP key? Yes/No");
 
-            if(Console.ReadLine().ToString().ToUpper().Equals("YES"))
+            if (Console.ReadLine().ToString().ToUpper().Equals("YES"))
             {
                 Console.WriteLine("Enter your key (PRO or EXP)");
 
                 Key = Console.ReadLine().ToString().ToUpper();
 
-                switch(Key)
+                switch (Key)
                 {
                     case "PROKEY":
                         {
-                            WorkWithProDocument();
+                            document = new ProDocumentWorker();
+                            WorkWithDocument(document);
                             break;
                         }
                     case "EXPKEY":
                         {
-                            WorkWithExpDocument();
+                            document = new ExpertDocumentWorker();
+                            WorkWithDocument(document);
                             break;
                         }
                     default:
                         {
-                            Console.WriteLine("Invalid key.");
-                            WorkWithBaseDocument();
+                            Console.WriteLine("Invalid key. You use base version.");
+
+                            document = new DocumentWorker();
+                            WorkWithDocument(document);
                             break;
                         }
                 }
             }
             else
             {
-                WorkWithBaseDocument();
+                document = new DocumentWorker();
+                WorkWithDocument(document);
             }
 
             Console.ReadKey();
         }
 
-        public static void WorkWithBaseDocument()
+        public static void WorkWithDocument(DocumentWorker document)
         {
-            Console.WriteLine("You use Base verion.");
-
-            DocumentWorker document = new DocumentWorker();
-            document.OpenDocument();
-            document.EditDocument();
-            document.SaveDocument();
-        }
-
-        public static void WorkWithProDocument()
-        {
-            Console.WriteLine("You use Pro verion.");
-
-            DocumentWorker document = new ProDocumentWorker();
-            document.OpenDocument();
-            document.EditDocument();
-            document.SaveDocument();
-        }
-
-        public static void WorkWithExpDocument()
-        {
-            Console.WriteLine("You use Exp verion.");
-
-            DocumentWorker document = new ExpertDocumentWorker();
             document.OpenDocument();
             document.EditDocument();
             document.SaveDocument();
